@@ -4,6 +4,7 @@ import { Vetement } from '../model/vetement.model';
 import { VetementService } from '../services/vetement.service';
 
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../services/auth.sevice';
 @Component({
   imports: [CommonModule,RouterLink],
   selector: 'app-vetements',
@@ -15,7 +16,8 @@ export class VetementsComponent implements OnInit  {
   vetements! : Vetement[]; //un tableau de Vetement
 
 
-  constructor(private vetementService: VetementService) {
+
+  constructor(private vetementService: VetementService,public authService: AuthService) {
    //this.vetements=[]
      
     

@@ -1,0 +1,19 @@
+$kind: http-request
+name: http://localhost:8090/produits/api/2
+description: ""
+url: http://localhost:8090/produits/api/2
+method: DELETE
+body:
+  type: json
+  content: " {\r
+
+    \        \"idProduit\": 1,\r
+
+    \        \"nomProduit\": \"PC AsUS\",\r
+
+    \        \"prixProduit\": 3000.0,\r
+
+    \        \"dateCreation\": \"2026-11-02\"\r
+
+    \    }"
+order: 1000

@@ -28,8 +28,12 @@
                         <td>{{vetement.couleur}}</td>
                         <td>{{vetement.dateCreation | date:'dd/MM/yyyy'}}</td>
                         <td>{{vetement.type.nomType}}</td>
+
+                        @if(authService.isAdmin()) {
+
                         <td><a class="btn btn-danger" (click)="supprimerVetement(vetement)">Supprimer</a></td>
                         <td><a class="btn btn-success" [routerLink]="['/updateVetement',vetement.idVetement]">Modifier</a></td>
+                        }
                     </tr>
                 </tbody>
                 @if(last)
